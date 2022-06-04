@@ -12,7 +12,7 @@ const __main = () => {
         fire: 'res/images/fire.png',
     }
     const game = Game.instance(images, (g) => {
-        const s = SceneStart.new(g)
+        const s = SceneMain.new(g)
         g.runWithScene(s)
     })
 }
