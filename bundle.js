@@ -350,25 +350,21 @@ var Ship = function (_GameObject) {
     }, {
         key: "moveLeft",
         value: function moveLeft() {
-            // this.x -= this.speed
             this.moveX(this.x - this.speed);
         }
     }, {
         key: "moveRight",
         value: function moveRight() {
-            // this.x += this.speed
             this.moveX(this.x + this.speed);
         }
     }, {
         key: "moveUp",
         value: function moveUp() {
-            // this.y -= this.speed
             this.moveY(this.y - this.speed);
         }
     }, {
         key: "moveDown",
         value: function moveDown() {
-            // this.y += this.speed
             this.moveY(this.y + this.speed);
         }
     }]);
@@ -769,7 +765,7 @@ var __main = function __main() {
         fire: 'res/images/fire.png'
     };
     var game = _Game2.default.instance(images, function (g) {
-        var s = _SceneStart2.default.new(g);
+        var s = _SceneMain2.default.new(g);
         g.runWithScene(s);
     });
 };
@@ -878,7 +874,6 @@ var ParticlePool = function () {
                 var p = this.pool[i];
 
                 if (p.update(dt)) {
-                    // Add this particle to the front of the list.
                     this.pool[i].next = this.firstAvailable_;
                     this.firstAvailable_ = this.pool[i];
                 }
